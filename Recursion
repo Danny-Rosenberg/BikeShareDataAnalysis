@@ -1,0 +1,36 @@
+Time Complexity T(n) (Scalability)
+Best, Average, Worst (cases)
+
+Stack animation recursion - youtube
+
+Scalability - Time as a function of input size
+	-for (array = length of array)
+
+
+Closed formula: a non-recursive formula
+
+Recurrence:
+if n = 1: 
+const1 = k1
+this time is constant
+
+otherwise:
+T(n-1) + const2(the comparison)
+-time taken for n-1 chunk (IH)
+
+T(n) = T(n-1) + k2
+I can plug in any value for n
+T(n-1) = T(n-2) + k2
+T(n) = T(n-1) + k2 + k2
+     = T(n-2) + 2k2
+T(n) = T(n-3) + 3k2
+Generalize:
+T(n) = T(n -m) + mk2 while m < n, m > 0
+When does this craziness end? When we hit the basecase
+Basecase: when n - m = 1, m = (n-1)
+
+T(n) = k1 + (n-1)k2 
+We’re in a closed form, non recursive solution!
+
+This tells us that we have a linear relationship
+
